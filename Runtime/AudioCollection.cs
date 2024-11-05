@@ -31,7 +31,7 @@ namespace WxTools.Audio
     }
 
 
-    [CreateAssetMenu(fileName = "RandomAudioCollection", menuName = "RandomAudio/AudioCollection", order = 1)]
+    [CreateAssetMenu(fileName = "AudioCollection", menuName = "WxTools/AudioCollection", order = 1)]
     public class AudioCollection : ScriptableObject
     {
         public List<AudioObject> audioObjects;
