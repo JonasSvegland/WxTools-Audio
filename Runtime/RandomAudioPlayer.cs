@@ -8,6 +8,9 @@ namespace WxTools.Audio
         [SerializeField]
         private AudioSource audioSource;
 
+        [SerializeField]
+        private bool waitForFinishedPlaying = false;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -30,8 +33,14 @@ namespace WxTools.Audio
                 return;
             }
 
+           
+                
             audioSource.pitch = Random.Range(audio.MinPitch, audio.MaxPitch);
             audioSource.volume = Random.Range(audio.MinVolume, audio.MaxVolume);
+
+            if (waitForFinishedPlaying && audioSource.isPlaying)
+                return;
+                
             audioSource.PlayOneShot(audio.Clip);
 
         }

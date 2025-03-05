@@ -1,6 +1,6 @@
 {
 	"name": "com.jonassvegland.wxtools-audio",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"displayName": "WxTools Audio",
 	"description": "Tools for Audio.",
 	"unity": "2022.3",
