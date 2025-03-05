@@ -9,7 +9,7 @@ namespace WxTools.Audio
         private AudioSource audioSource;
 
         [SerializeField]
-        private bool waitForFinishedPlaying = false;
+        private bool skipIfAlreadyPlaying = false;
 
         // Start is called before the first frame update
         void Start()
@@ -38,7 +38,7 @@ namespace WxTools.Audio
             audioSource.pitch = Random.Range(audio.MinPitch, audio.MaxPitch);
             audioSource.volume = Random.Range(audio.MinVolume, audio.MaxVolume);
 
-            if (waitForFinishedPlaying && audioSource.isPlaying)
+            if (skipIfAlreadyPlaying && audioSource.isPlaying)
                 return;
                 
             audioSource.PlayOneShot(audio.Clip);
